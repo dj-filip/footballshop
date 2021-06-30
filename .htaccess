@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+
+
+
+RewriteRule ^product/([a-zA-Z0-9]+)/([a-zA-Z0-9\s-]+)?$ ./details.php?id=$1&name=$2 [NC]
+
+
+
+
+## RewriteRule details/(.*)/ details.php?id=$1
+## RewriteRule details/(.*) details.php?id=$1 
+
+
+## RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(details)\.php\?id=(\d+)&name=(.+)\ HTTP
+## RewriteRule ^product\.php$ /%1/%2/%3? [NE,R=301,L]
+## RewriteRule ^product/(\d+)/(.+) details.php?id=$1&name=$2 [R=301,L]
