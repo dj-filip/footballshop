@@ -21,24 +21,6 @@ cartButton.onclick = function() {
     cartButton.classList.toggle('active');
 }
 
-let nightModeButton = document.getElementById('switch');
-nightModeButton.addEventListener('click', checkMode);
 
-function checkMode() {
-    console.log('dugme radi');
-    if(nightModeButton.checked) {
-        darkModeOn();
-    } else {
-        darkModeOff();
-    }
-}
-
-function darkModeOn() {
-    document.body.classList.add('dark-mode');
-}
-
-function darkModeOff() {
-    document.body.classList.remove('dark-mode');
-}
 
 
